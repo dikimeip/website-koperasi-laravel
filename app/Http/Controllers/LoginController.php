@@ -21,9 +21,9 @@ class LoginController extends Controller
     	if ($request->pilih == "1") {
     		$query = Admin::where(['email' => $uname ,'password' => $password ])->get();
             if (count($query) > 0 ) {
-                return "Success" ;
+                return redirect()->route('admin.index');
             } else {
-                return "Failed";
+                 return redirect()->back();
             }
     	} elseif ($request->pilih == "2") {
     		return "kastaf";
