@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Admin;
+use App\KepalaStaf;
 
 class LoginController extends Controller
 {
@@ -26,7 +27,12 @@ class LoginController extends Controller
                  return redirect()->back();
             }
     	} elseif ($request->pilih == "2") {
-    		return "kastaf";
+    		$query = KepalaStaf::where(['username' => $uname,'password' => $password])->get();
+            if (count($query) > 0 ) {
+                return redirect()->route('kepala.index');
+            } else {
+                 return redirect()->back();
+            }
     	} else {
     		return "Ok";
     	}

@@ -14,4 +14,5 @@
 Route::get('/','LoginController@index');
 Route::post('/','LoginController@do_login')->name('doLogin');
 Route::get('/admin','AdminController@index')->name('admin.index');
+Route::get('/kepala','StaffController@index')->name('kepala.index');
 
