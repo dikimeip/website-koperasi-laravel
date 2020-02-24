@@ -12,3 +12,4 @@
 */
 
 Route::get('/','LoginController@index');
+Route::post('/','LoginController@do_login')->name('doLogin');
