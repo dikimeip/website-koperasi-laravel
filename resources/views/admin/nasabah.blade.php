@@ -4,7 +4,7 @@
 <br>
 <div class="row">
 	<div class="col-md-8">
-		<a href="" class="btn btn-info btn-sm">TAMBAH NASABAH</a>
+		<a href="{{route('admin.nasabah_tambah')}}" class="btn btn-info btn-sm">TAMBAH NASABAH</a>
 	</div>
 	<div class="col-md-4">
 		<form>
@@ -34,7 +34,8 @@
 		<th></th>
 		<th>{{$a->status}}</th>
 		<th>
-			<a href="" class="btn btn-warning btn-sm">HAPUS</a>
+			<a href="" class="btn btn-warning btn-sm">EDIT</a>
+			<a href="" class="btn btn-success btn-sm">SHOW</a>
 		</th>
 	</tr>
 	@endforeach

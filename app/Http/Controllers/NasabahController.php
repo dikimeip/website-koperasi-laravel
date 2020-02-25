@@ -12,4 +12,9 @@ class NasabahController extends Controller
     	$nasabah = Customer::all();
     	return view('admin.nasabah',compact('nasabah')) ;
     }
+
+    public function create()
+    {
+    	return view('admin.nasabah_add'); 
+    }
 }
