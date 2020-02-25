@@ -20,8 +20,6 @@
 		<th>NO</th>
 		<th>NAMA</th>
 		<th>ALAMAT</th>
-		<th>NO</th>
-		<th>FOTO</th>
 		<th>STATUS</th>
 		<th>AKSI</th>
 	</tr>
@@ -30,8 +28,6 @@
 		<th>{{$n+1}}</th>
 		<th>{{$a->nama}}</th>
 		<th>{{$a->alamat}}</th>
-		<th>{{$a->no_hp}}</th>
-		<th></th>
 		<th>{{$a->status}}</th>
 		<th>
 			<a href="" class="btn btn-warning btn-sm">EDIT</a>

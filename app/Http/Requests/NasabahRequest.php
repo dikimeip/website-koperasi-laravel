@@ -13,7 +13,7 @@ class NasabahRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -27,6 +27,7 @@ class NasabahRequest extends FormRequest
             'nama' => 'required|min:5',
             'alamat' => 'required|min:5',
             'no' => 'required|min:10',
+            
         ];
     }
 }
