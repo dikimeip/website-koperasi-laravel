@@ -17,11 +17,11 @@
 			</div>
 			<div class="form-group">
 				<label>Masukan NoHp Nasabah</label>
-				<input type="number" name="nama" class="form-control">
+				<input type="number" name="no" class="form-control">
 			</div>
 			<div class="form-group">
 				<label>Masukan Foto Nasabah</label>
-				<input type="text" name="nama" class="form-control">
+				<input type="text" name="foto" class="form-control" required="">
 			</div>
 			<input type="submit" value="TAMBAH" class="btn btn-success btn-sm">
 		</form>
