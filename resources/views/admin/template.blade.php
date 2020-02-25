@@ -57,23 +57,23 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li>
-                            <a href="chart.html">
+                            <a href="">
                                 <i class="fas fa-chart-bar"></i>Dasboard</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="">
                                 <i class="fas fa-table"></i>Peminjaman</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="">
                                 <i class="far fa-check-square"></i>Angsuran</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="">
                                 <i class="fas fa-calendar-alt"></i>Tabungan</a>
                         </li>
                         <li>
-                            <a href="map.html">
+                            <a href="">
                                 <i class="fas fa-map-marker-alt"></i>Nasabah</a>
                         </li>
                     </ul>
@@ -91,23 +91,23 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li>
-                            <a href="chart.html">
+                            <a href="">
                                 <i class="fas fa-chart-bar"></i>Dasboard</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="">
                                 <i class="fas fa-table"></i>Peminjaman</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="">
                                 <i class="far fa-check-square"></i>Angsuran</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="">
                                 <i class="fas fa-calendar-alt"></i>Tabungan</a>
                         </li>
                         <li>
-                            <a href="map.html">
+                            <a href="{{route('admin.nasabah')}}">
                                 <i class="fas fa-map-marker-alt"></i>Nasabah</a>
                         </li>
                     </ul>
@@ -170,7 +170,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1 class="text-center">ADMIN DASBOARD</h1>
+                                @yield('isi')
                             </div>
                         </div>
                     </div>
