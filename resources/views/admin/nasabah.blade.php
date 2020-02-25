@@ -31,7 +31,7 @@
 		<th>{{$a->status}}</th>
 		<th>
 			<a href="" class="btn btn-warning btn-sm">EDIT</a>
-			<a href="" class="btn btn-success btn-sm">SHOW</a>
+			<a href="{{route('admin.nasabah_tampil',$a->id)}}" class="btn btn-success btn-sm">SHOW</a>
 		</th>
 	</tr>
 	@endforeach

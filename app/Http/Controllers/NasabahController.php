@@ -38,4 +38,10 @@ class NasabahController extends Controller
         Session::flash('success','Success Input Data');
         return redirect('admin.nasabah') ;
     }
+
+    public function show($id)
+    {
+    	$nasabah = Customer::find($id);
+    	return view('admin.nasabah_show',compact('nasabah'));
+    }
 }
