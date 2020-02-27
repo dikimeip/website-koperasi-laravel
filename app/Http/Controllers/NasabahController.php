@@ -65,7 +65,20 @@ class NasabahController extends Controller
             Session::flash('success','Success Input Data');
             return redirect()->route('admin.nasabah');
         } else {
-            return "ada" ;
+            $data = Customers::find($id);
+            $gambar = $request->file('foto');
+            $org = $gambar->getClientOriginalName();
+            $path = "image";
+            $gambar->move($path,$org);
+            $data->update([
+                'nama' => $request->nama,
+                'alamat' => $request->alamat,
+                'no_hp' => $request->no,
+                'foto' => $org,
+            ]);
+
+            Session::flash('success','Success Input Data');
+            return redirect()->route('admin.nasabah');
         }
     }
 }
