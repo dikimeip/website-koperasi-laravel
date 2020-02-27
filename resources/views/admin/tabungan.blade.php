@@ -4,7 +4,7 @@
 <br>
 <div class="row">
 	<div class="col-md-8">
-		<a href="{{route('admin.nasabah_tambah')}}" class="btn btn-info btn-sm">TAMBAH TABUNGAN</a>
+		<a href="{{route('admin.tabungan_tambah')}}" class="btn btn-info btn-sm">TAMBAH TABUNGAN</a>
 	</div>
 	<div class="col-md-4">
 		<form>

@@ -21,6 +21,8 @@ Route::get('/admin/nasabah/show_tambah/{id}','NasabahController@show')->name('ad
 Route::get('/admin/nasabah/edit/{id}','NasabahController@edit')->name('admin.nasabah_edit');
 Route::post('/admin/nasabah/update/{id}','NasabahController@update')->name('admin.nasabah_upate');
 Route::get('/admin/tabungan','TabunganController@index')->name('admin.tabungan');
+Route::get('/admin/tabungan/tambah','TabunganController@create')->name('admin.tabungan_tambah');
+
 
 
 
