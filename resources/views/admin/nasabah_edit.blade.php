@@ -16,21 +16,22 @@
 			{{csrf_field()}}
 			<div class="form-group">
 				<label>Nama Nasabah</label>
-				<input type="text" name="nama" class="form-control" value="{{@old('nama')}}">
+				<input type="text" name="nama" class="form-control" value="{{$nasabah->nama}}">
 				@error('nama') <span style="color: red">{{$message}}</span>@enderror
 			</div>
 			<div class="form-group">
 				<label>Alamat Nasabah</label>
-				<textarea class="form-control" name="alamat" style="height: 200px">{{@old('alamat')}}</textarea>
+				<textarea class="form-control" name="alamat" style="height: 200px">{{$nasabah->alamat}}</textarea>
 				@error('alamat') <span style="color: red">{{$message}}</span>@enderror
 			</div>
 			<div class="form-group">
 				<label>NoHp Nasabah</label>
-				<input type="number" name="no" class="form-control" value="{{@old('no')}}">
+				<input type="number" name="no" class="form-control" value="{{$nasabah->no_hp}}">
 				@error('no') <span style="color: red">{{$message}}</span>@enderror
 			</div>
 			<div class="form-group">
-				<label>Foto Nasabah</label>
+				<label>Foto Nasabah</label><br>
+				<img src="{{asset('image/'.$nasabah->foto)}}" style="width: 100px">
 				<input type="file" name="foto" class="form-control" >
 			</div>
 			<input type="submit" value="TAMBAH" class="btn btn-success btn-sm">
