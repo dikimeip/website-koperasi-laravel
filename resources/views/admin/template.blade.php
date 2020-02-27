@@ -76,6 +76,10 @@
                             <a href="">
                                 <i class="fas fa-map-marker-alt"></i>Nasabah</a>
                         </li>
+                         <li>
+                            <a href="">
+                                <i class="fas fa-map-marker-alt"></i>Cari Nasabah</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -109,6 +113,10 @@
                         <li>
                             <a href="{{route('admin.nasabah')}}">
                                 <i class="fas fa-map-marker-alt"></i>Nasabah</a>
+                        </li>
+                         <li>
+                            <a href="">
+                                <i class="fas fa-map-marker-alt"></i>Cari Nasabah</a>
                         </li>
                     </ul>
                 </nav>
