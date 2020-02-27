@@ -103,7 +103,7 @@
                                 <i class="far fa-check-square"></i>Angsuran</a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{route('admin.tabungan')}}">
                                 <i class="fas fa-calendar-alt"></i>Tabungan</a>
                         </li>
                         <li>
