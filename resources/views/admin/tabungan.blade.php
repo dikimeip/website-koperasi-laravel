@@ -35,7 +35,7 @@
 		<th>{{$a->jumlah}}</th>
 		<th>{{$a->tanggal}}</th>
 		<th>
-			<a href="" class="btn btn-info btn-sm">DETAIL</a>
+			<a href="{{route('admin.tabungan_tampil',$a->id)}}" class="btn btn-info btn-sm">DETAIL</a>
 			<a href="" class="btn btn-warning btn-sm">HAPUS</a>
 		</th>
 	</tr>

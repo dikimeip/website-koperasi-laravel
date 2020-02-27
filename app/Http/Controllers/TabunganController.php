@@ -35,4 +35,10 @@ class TabunganController extends Controller
     	Session::flash('success','Input Data Tabungan Success');
     	return redirect()->route('admin.tabungan') ;
     }
+
+    public function show($id)
+    {
+        $tabungan = Tabungan::find($id);
+        return view('admin.tabungan_show',compact('tabungan')) ;
+    }
 }

@@ -23,8 +23,7 @@ Route::post('/admin/nasabah/update/{id}','NasabahController@update')->name('admi
 Route::get('/admin/tabungan','TabunganController@index')->name('admin.tabungan');
 Route::get('/admin/tabungan/tambah','TabunganController@create')->name('admin.tabungan_tambah');
 Route::post('/admin/tabungan/do_tambah','TabunganController@insert')->name('admin.tabungan_do_tambah');
-
-
+Route::get('/admin/tabungan/show_tambah/{id}','TabunganController@show')->name('admin.tabungan_tampil');
 
 
 
