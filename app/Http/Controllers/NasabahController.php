@@ -44,4 +44,9 @@ class NasabahController extends Controller
     	$nasabah = Customer::find($id);
     	return view('admin.nasabah_show',compact('nasabah'));
     }
+
+    public function edit($id)
+    {
+        return view('admin.nasabah_edit') ;
+    }
 }
