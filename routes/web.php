@@ -22,6 +22,7 @@ Route::get('/admin/nasabah/edit/{id}','NasabahController@edit')->name('admin.nas
 Route::post('/admin/nasabah/update/{id}','NasabahController@update')->name('admin.nasabah_upate');
 Route::get('/admin/tabungan','TabunganController@index')->name('admin.tabungan');
 Route::get('/admin/tabungan/tambah','TabunganController@create')->name('admin.tabungan_tambah');
+Route::post('/admin/tabungan/do_tambah','TabunganController@insert')->name('admin.tabungan_do_tambah');
 
 
 

@@ -25,8 +25,8 @@ class TabunganRequest extends FormRequest
     {
         return [
             'jumlah' => 'required|min:5',
-            'keterangan' => 'required|min:5',
-            'admin' => 'required|min:10',
+            'ket' => 'required|min:5',
+            'admin' => 'required|min:4',
         ];
     }
 }

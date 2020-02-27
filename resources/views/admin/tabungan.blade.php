@@ -1,6 +1,6 @@
 @extends('admin.template')
 @section('isi')
-<h1 class="text-center">HALAMAN NASABAH</h1>
+<h1 class="text-center">HALAMAN TABUNGAN</h1>
 <br>
 <div class="row">
 	<div class="col-md-8">
@@ -15,6 +15,11 @@
 	</div>
 </div>
 <hr>
+@if(Session::has('success'))
+<div class="alert alert-success">
+	<p>{{Session::get('success')}}</p>
+</div>	
+@endif
 <table class="table table-hover" style="background-color: white">
 	<tr>
 		<th>NO</th>
