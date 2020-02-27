@@ -12,7 +12,7 @@
 <div class="row">
 	<div class="col-md-3"></div>
 	<div class="col-md-6">
-		<form action="" method="post" enctype="multipart/form-data">
+		<form action="{{route('admin.nasabah_upate',$nasabah->id)}}" method="post" enctype="multipart/form-data">
 			{{csrf_field()}}
 			<div class="form-group">
 				<label>Nama Nasabah</label>
@@ -34,7 +34,7 @@
 				<img src="{{asset('image/'.$nasabah->foto)}}" style="width: 100px">
 				<input type="file" name="foto" class="form-control" >
 			</div>
-			<input type="submit" value="TAMBAH" class="btn btn-success btn-sm">
+			<input type="submit" value="UBAH" class="btn btn-success btn-sm">
 		</form>
 	</div>
 </div>

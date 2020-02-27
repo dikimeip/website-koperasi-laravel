@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Customers;
 use Illuminate\Http\Request;
-use App\Customer;
 use App\Http\Requests\NasabahRequest;
 use Session;
 
@@ -11,7 +11,7 @@ class NasabahController extends Controller
 {
     public function index()
     {
-    	$nasabah = Customer::all();
+    	$nasabah = Customers::all();
     	return view('admin.nasabah',compact('nasabah')) ;
     }
 
@@ -27,7 +27,7 @@ class NasabahController extends Controller
         $path = "image";
         $gambar->move($path,$org);
 
-        Customer::create([
+        Customers::create([
         	'nama' => $request->nama,
         	'alamat' => $request->alamat,
         	'no_hp' => $request->no,
@@ -41,13 +41,31 @@ class NasabahController extends Controller
 
     public function show($id)
     {
-    	$nasabah = Customer::find($id);
+    	$nasabah = Customers::find($id);
     	return view('admin.nasabah_show',compact('nasabah'));
     }
 
     public function edit($id)
     {
-        $nasabah = Customer::find($id);
+        $nasabah = Customers::find($id);
         return view('admin.nasabah_edit',compact('nasabah')) ;
+    }
+
+    public function update(NasabahRequest $request,$id)
+    {
+        $gambar = $request->file('foto');
+        if ($gambar == null) {
+           $data = Customers::find($id);
+           $data->update([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'no_hp' => $request->no,
+           ]);
+
+            Session::flash('success','Success Input Data');
+            return redirect()->route('admin.nasabah');
+        } else {
+            return "ada" ;
+        }
     }
 }
